@@ -2,7 +2,7 @@ const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
 
-const taskRoutes = require('./routes/task.routes')
+const taskRoutes = require('./src/routes/task.routes')
 
 
 const app = express()

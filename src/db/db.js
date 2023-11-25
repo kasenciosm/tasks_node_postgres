@@ -4,11 +4,12 @@ const { db } = require('../config/config')
 
 
 const pool = new Pool({
-    user: db.user,
-    password: db.password,
-    host: db.host,
-    port: db.port,
-    database: db.database
+    connectionString: db.connectionString
+})
+
+pool.connect((err) => {
+    if (err) throw err
+    console.log('Connect to PostgreSQL succesfully')
 })
 
 module.exports = pool
